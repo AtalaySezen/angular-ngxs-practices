@@ -25,19 +25,21 @@ export class EmployeeState {
 
     @Action(getAllEmployee)
     getAllEmployee(ctx: StateContext<EmployeeStateModel>) {
-        return this.dataService.getAllEmployee().pipe(tap((response) => {
-            const state = ctx.getState();
-            ctx.setState({
-                ...state,
-                employees: response.data
+        return this.dataService.getAllEmployee().pipe(
+            tap(response => {
+                const state = ctx.getState();
+                ctx.setState({
+                    ...state,
+                    employees: response.data || []
+                });
             })
-        }))
+        );
     }
 
-    @Selector([EmployeeState])
+    @Selector()
     static selectEmployee(state: EmployeeStateModel) {
         return state.employees;
     }
-    
+
 }
 
