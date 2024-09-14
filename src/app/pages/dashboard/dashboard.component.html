@@ -1,2 +1,10 @@
-<p>Total Employees : {{totalEmployees}}</p>
-<app-employees></app-employees>
+<div class="container">
+    <div class="flex-btn">
+        <button mat-raised-button (click)="dashboardOpen = true">Dashboard</button>
+        <button mat-raised-button (click)="dashboardOpen = false">Employees</button>
+    </div>
+    <ng-container *ngIf="dashboardOpen">
+        <p class="text-header">Total Employees : {{totalEmployees}}</p>
+    </ng-container>
+    <app-employees class="w-full" *ngIf="!dashboardOpen"></app-employees>
+</div>
