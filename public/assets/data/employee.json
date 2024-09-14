@@ -1,0 +1,30 @@
+{
+    "status": "success",
+    "message": "success",
+    "data": [
+        {
+            "id": "12350",
+            "name": "Michael Wilson",
+            "email": "michael.wilson@example.com",
+            "mobile": "+1234567895",
+            "dob": "1987-06-18",
+            "doj": "2017-12-01"
+        },
+        {
+            "id": "12351",
+            "name": "Jane Doe",
+            "email": "jane.doe@example.com",
+            "mobile": "+1234567896",
+            "dob": "1990-01-15",
+            "doj": "2018-07-20"
+        },
+        {
+            "id": "12352",
+            "name": "Alice Johnson",
+            "email": "alice.johnson@example.com",
+            "mobile": "+1234567897",
+            "dob": "1992-03-22",
+            "doj": "2019-11-11"
+        }
+    ]
+}
